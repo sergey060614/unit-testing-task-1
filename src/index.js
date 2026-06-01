@@ -1,5 +1,6 @@
-import './css/style.css';
+// TODO: write your code here
+import sum from './basic';
 
-import './js/app';
+console.log('worked');
 
-// TODO: write your code in app.js
+console.log(sum([1, 2]));
