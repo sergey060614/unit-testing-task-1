@@ -1,21 +1,18 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true,
-    'node': true
+  root: true,
+  env: {
+    node: true,
+    es2021: true,
+    jest: true,
   },
-  'extends': 'eslint:recommended',
-  'overrides': [
-    {
-      'files': ['**/*/*.test.js'],
-      'plugins': ['jest'],
-      'extends': ['plugin:jest/recommended'],
-      'rules': { 'jest/prefer-expect-assertions': 'off' }
-    }
+  extends: [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
   ],
-  'parserOptions': {
-    'ecmaVersion': 'latest',
-    'sourceType': 'module'
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: "module",
   },
-  'rules': {}
-}
+  plugins: ["jest"],
+};
